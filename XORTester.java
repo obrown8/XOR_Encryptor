@@ -10,7 +10,7 @@ import java.util.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class XORTester extends JFrame implements ActionListener{
+public class XORTester extends JFrame implements ActionListener {
 	
 	JButton encB, decB;
 	JTextField input; 
@@ -23,7 +23,7 @@ public class XORTester extends JFrame implements ActionListener{
     	int yourInt = 0;
    	StringBuilder asciimsg = new StringBuilder("");
 
-    	public XORTester(){
+    	public XORTester() {
 		//frame
 		setTitle("Encryption/Decryption");
 		setSize(600, 600);
@@ -66,12 +66,13 @@ public class XORTester extends JFrame implements ActionListener{
 		key = 'U';
 
 		asciikey = Integer.toBinaryString((int) key);
+		
 		while(asciikey.length() < 8) {
-		   asciikey = "0" + asciikey;
+			asciikey = "0" + asciikey;
 		}
-		if(e.getSource() == encB){
-		    //encrypt
-
+		
+		if(e.getSource() == encB) {
+			//encrypt
 			for(int i = 0; i < message.length(); i++) {
 				yourInt = (int) message.charAt(i);
 				ascii = Integer.toBinaryString(yourInt);
@@ -82,14 +83,12 @@ public class XORTester extends JFrame implements ActionListener{
 			}
 			output.append("\n");
 			asciimsg = new StringBuilder("");
-		}
-
-		else if (e.getSource() == decB) {
-		    //decrypt
+		} else if(e.getSource() == decB) {
+		    	//decrypt
 			String asciiTemp = "";
 			int count = 0;
 			for(int i = 0; i < (message.length() / 8); i++) {
-				for(int j = 0; j < 8; j++){
+				for(int j = 0; j < 8; j++) {
 					ascii = Character.toString(message.charAt(count));
 					count++;
 					asciiTemp += (ascii);
