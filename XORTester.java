@@ -1,6 +1,6 @@
 /**
  * @author Owen Brown and Mathew Boivin
- *
+ * Uploaded: November 29, 2018
  *
  *	XOR Encryptor - This program encrypts messages by XORing the ascii value of the string
  *		with a specific key to get a message in binary. It can also accept binary and 
